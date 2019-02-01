@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>Slideshow2</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .window {
+        overflow: hidden;
+        width: 600px;
+        height: 519px;
+        margin: 0 auto;
+      }
+
+      .images {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .images > img {
+        position: absolute;
+        transition: all 1s;
+      }
+
+      .images > img.show {
+        transform: translateX(0);
+        z-index: 2;
+      }
+      .images > img.enter {
+        transform: translateX(100%);
+        z-index: 1;
+      }
+      .images > img.leave {
+        transform: translateX(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="images">
+        <img src="./images/1.jpg" width="600" />
+        <img src="./images/2.jpg" width="600" />
+        <img src="./images/3.jpg" width="600" />
+        <img src="./images/4.jpg" width="600" />
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
